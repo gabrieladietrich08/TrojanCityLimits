@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story behind Trojan City Limits - celebrating every team and every club at Anderson High School.">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:title" content="Our Story | Trojan City Limits">
+  <meta property="og:description" content="The story behind the shirt that represents every team and club at Anderson High School.">
+  <meta property="og:image" content="https://trojancitylimits.com/images/hero-front.png">
+  <meta property="og:url" content="https://trojancitylimits.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Trojan City Limits">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Story | Trojan City Limits">
+  <meta name="twitter:description" content="The story behind the shirt that represents every team and club at Anderson High School.">
+  <meta name="twitter:image" content="https://trojancitylimits.com/images/hero-front.png">
+
+  <title>Our Story | Trojan City Limits</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/shirt-front.jpg">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- HEADER -->
+  <!-- ============================================= -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <img src="images/shirt-front.jpg" alt="Trojan City Limits" class="logo__img">
+        <span class="logo__text">Trojan City Limits</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html#shop" class="nav__link">Shop</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="index.html#faq" class="nav__link">FAQ</a>
+        <a href="https://instagram.com/trojancitylimits" target="_blank" class="nav__link nav__link--icon" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- ABOUT HERO -->
+  <!-- ============================================= -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="about-hero__title">For Every Trojan</h1>
+      <p class="about-hero__subtitle">The story behind Trojan City Limits</p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- ABOUT CONTENT -->
+  <!-- ============================================= -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="about-content">
+        <p>The idea was simple: what if we made a shirt that represented <em>everyone</em> at Anderson High School?</p>
+
+        <p>Inspired by Austin City Limits' iconic festival posters - where bands are stacked in that unmistakable lineup format - we created Trojan City Limits. But instead of headliners and opening acts, we feature something better: every single team and club that makes Anderson what it is.</p>
+
+        <div class="about-highlight">
+          "Because being a Trojan isn't about which group you're in. It's about being part of something bigger."
+        </div>
+
+        <p>From Football to French Club. From Cheer to Chess Club. From Debate to DECA. Over 100 groups are represented on the back of this shirt - and that's the whole point.</p>
+
+        <p>We believe school spirit shouldn't just belong to the biggest teams or the loudest groups. It belongs to everyone who walks the halls of Anderson. The coders. The artists. The debaters. The athletes. The musicians. The volunteers. All of us.</p>
+
+        <div class="about-image">
+          <img src="images/about-couple.png" alt="Trojan City Limits - Students wearing the shirt">
+        </div>
+
+        <p>This is our lineup. This is Anderson. This is <strong>Trojan City Limits</strong>.</p>
+
+        <div class="text-center mt-lg">
+          <a href="index.html#shop" class="btn btn--primary btn--large">Shop Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- EMAIL SIGNUP SECTION -->
+  <!-- ============================================= -->
+  <section class="signup section section--navy">
+    <div class="container">
+      <div class="signup__inner">
+        <h2 class="signup__title">Stay In The Loop</h2>
+        <p class="signup__text">Get notified about pickup dates, future drops, and exclusive updates.</p>
+        <form class="signup__form" id="emailForm" onsubmit="handleEmailSubmit(event)">
+          <input
+            type="email"
+            class="signup__input"
+            placeholder="Enter your email"
+            required
+            id="emailInput"
+          >
+          <button type="submit" class="btn btn--primary signup__btn">Subscribe</button>
+        </form>
+        <p id="emailSuccess" style="display: none; margin-top: 1rem; color: var(--trojan-gold);">
+          <i class="fas fa-check-circle"></i> You're on the list!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="images/shirt-front.jpg" alt="Trojan City Limits" class="footer__logo">
+          <span class="footer__name">Trojan City Limits</span>
+        </div>
+        <div class="footer__links">
+          <a href="index.html#shop" class="footer__link">Shop</a>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="index.html#faq" class="footer__link">FAQ</a>
+          <a href="https://instagram.com/trojancitylimits" target="_blank" class="footer__link">Instagram</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://instagram.com/trojancitylimits" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Trojan City Limits. All rights reserved.</p>
+        <p class="footer__badge">Official Anderson High School Approved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

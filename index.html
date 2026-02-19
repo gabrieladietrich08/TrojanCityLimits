@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trojan City Limits - The official Anderson High School t-shirt featuring every team and every club. 2025-2026 Edition.">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:title" content="Trojan City Limits | Every Team. Every Club. One Shirt.">
+  <meta property="og:description" content="The official Anderson High School 2025-2026 t-shirt featuring 100+ teams and clubs. Inspired by Austin City Limits.">
+  <meta property="og:image" content="https://trojancitylimits.com/images/hero-front.png">
+  <meta property="og:url" content="https://trojancitylimits.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Trojan City Limits">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trojan City Limits | Every Team. Every Club. One Shirt.">
+  <meta name="twitter:description" content="The official Anderson High School 2025-2026 t-shirt featuring 100+ teams and clubs.">
+  <meta name="twitter:image" content="https://trojancitylimits.com/images/hero-front.png">
+
+  <title>Trojan City Limits | Anderson High School 2025-2026</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon (optional - add your own) -->
+  <link rel="icon" type="image/png" href="images/shirt-front.jpg">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- HEADER -->
+  <!-- ============================================= -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <img src="images/shirt-front.jpg" alt="Trojan City Limits" class="logo__img">
+        <span class="logo__text">Trojan City Limits</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="#shop" class="nav__link">Shop</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+        <a href="https://instagram.com/trojancitylimits" target="_blank" class="nav__link nav__link--icon" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- HERO SECTION -->
+  <!-- ============================================= -->
+  <section class="hero hero--fullscreen" style="background-image: url('images/hero-front.png');">
+    <div class="hero__overlay"></div>
+    <div class="container">
+      <div class="hero__content hero__content--centered">
+        <p class="hero__tagline">2025 - 2026 Edition</p>
+        <h1 class="hero__title">Trojan City Limits</h1>
+        <p class="hero__subtitle">Every team. Every club. One shirt.</p>
+        <div class="hero__cta">
+          <a href="#shop" class="btn btn--primary btn--large">Shop Now</a>
+          <a href="about.html" class="btn btn--outline-light btn--large">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SHOWCASE - THE BACK -->
+  <!-- ============================================= -->
+  <section class="showcase section fade-in">
+    <div class="container">
+      <div class="showcase__inner showcase__inner--reverse">
+        <div class="showcase__image">
+          <img src="images/mockup-back.png" alt="Trojan City Limits T-Shirt Back - All Teams and Clubs">
+        </div>
+        <div class="showcase__content">
+          <p class="showcase__label">The Lineup</p>
+          <h2 class="showcase__title">Inspired by Austin City Limits</h2>
+          <p class="showcase__text">Just like the iconic festival poster, our back design features every Anderson team and club - from Football to French Club, from Cheer to Chess Club. Over 100 groups represented. Find yours.</p>
+          <a href="#shop" class="btn btn--secondary mt-md">Get Yours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FEATURES SECTION -->
+  <!-- ============================================= -->
+  <section class="features section section--alt fade-in">
+    <div class="container">
+      <div class="features__header">
+        <h2 class="features__title">Made For Every Trojan</h2>
+      </div>
+      <div class="features__grid fade-in-stagger">
+        <div class="feature-card feature-card--stats">
+          <div class="feature-card__number">2</div>
+          <h3 class="feature-card__label">Colors</h3>
+          <p class="feature-card__text">White & Light Blue</p>
+        </div>
+        <div class="feature-card feature-card--stats">
+          <div class="feature-card__number">2</div>
+          <h3 class="feature-card__label">Materials</h3>
+          <p class="feature-card__text">Cotton $20 · Dri-Fit $25</p>
+        </div>
+        <div class="feature-card feature-card--stats">
+          <div class="feature-card__number">100<span class="feature-card__plus">+</span></div>
+          <h3 class="feature-card__label">Teams & Clubs</h3>
+          <p class="feature-card__text">Everyone belongs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- PRODUCT SECTION -->
+  <!-- ============================================= -->
+  <section class="product section fade-in" id="shop">
+    <div class="container">
+      <div class="product__inner">
+
+        <!-- Product Gallery -->
+        <div class="product__gallery">
+          <div class="product__main-image">
+            <img src="images/cotton-front.png" alt="Trojan City Limits T-Shirt" id="mainProductImage">
+          </div>
+          <div class="product__thumbnails">
+            <button class="product__thumb product__thumb--active" id="thumbFront" onclick="changeImage('front', this)">
+              <img src="images/cotton-front.png" alt="Front view" id="thumbFrontImg">
+            </button>
+            <button class="product__thumb" id="thumbBack" onclick="changeImage('back', this)">
+              <img src="images/cotton-back.png" alt="Back view" id="thumbBackImg">
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product__info">
+          <h2 class="product__title">Trojan City Limits Tee</h2>
+          <p class="product__tagline">2025-2026 Edition - Every team. Every club. One shirt.</p>
+          <p class="product__price" id="productPrice">$20</p>
+
+          <div class="product__options">
+
+            <!-- Color Selection -->
+            <div class="product__option-group">
+              <label class="product__option-label">Color</label>
+              <div class="product__option-buttons" id="colorOptions">
+                <button class="option-btn option-btn--color option-btn--selected" data-color="white" onclick="selectOption('color', 'white', this)">
+                  <span class="color-swatch color-swatch--white"></span>
+                  White
+                </button>
+                <button class="option-btn option-btn--color" data-color="lightblue" onclick="selectOption('color', 'lightblue', this)">
+                  <span class="color-swatch color-swatch--lightblue"></span>
+                  Light Blue
+                </button>
+              </div>
+            </div>
+
+            <!-- Material Selection -->
+            <div class="product__option-group">
+              <label class="product__option-label">Material</label>
+              <div class="product__option-buttons" id="materialOptions">
+                <button class="option-btn option-btn--selected" data-material="cotton" data-price="20" onclick="selectOption('material', 'cotton', this)">
+                  Cotton - $20
+                </button>
+                <button class="option-btn" data-material="drifit" data-price="25" onclick="selectOption('material', 'drifit', this)">
+                  Dri-Fit - $25
+                </button>
+              </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="product__option-group">
+              <label class="product__option-label">Size</label>
+              <div class="product__option-buttons" id="sizeOptions">
+                <button class="option-btn" data-size="s" onclick="selectOption('size', 's', this)">S</button>
+                <button class="option-btn" data-size="m" onclick="selectOption('size', 'm', this)">M</button>
+                <button class="option-btn option-btn--selected" data-size="l" onclick="selectOption('size', 'l', this)">L</button>
+                <button class="option-btn" data-size="xl" onclick="selectOption('size', 'xl', this)">XL</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Add to Cart Button -->
+          <div class="product__add-to-cart">
+            <a href="#" id="buyButton" class="btn btn--primary btn--large" style="width: 100%;">
+              <i class="fas fa-shopping-bag"></i>
+              Pre-Order Now
+            </a>
+          </div>
+
+          <!-- Pickup Info -->
+          <div class="pickup-info">
+            <p class="pickup-info__title">
+              <i class="fas fa-map-marker-alt"></i>
+              Pickup Only - No Shipping
+            </p>
+            <p class="pickup-info__text">
+              Orders will be available for pickup at school during lunch. Pickup dates will be announced on our <a href="https://instagram.com/trojancitylimits" target="_blank" style="color: var(--trojan-gold); font-weight: 600;">Instagram</a>. Parents may pick up from the front office.
+            </p>
+          </div>
+
+          <!-- Product Description -->
+          <div class="product__description">
+            <h4>About This Shirt</h4>
+            <p>The official Trojan City Limits tee for the 2025-2026 school year. Inspired by Austin City Limits' iconic festival posters, this shirt celebrates every single team and club at Anderson High School.</p>
+            <ul>
+              <li><strong>Front:</strong> Anderson Trojans helmet with "City Limits" script</li>
+              <li><strong>Back:</strong> Full lineup of 20+ sports teams and 80+ clubs</li>
+              <li><strong>Cotton:</strong> Classic soft feel, true to size</li>
+              <li><strong>Dri-Fit:</strong> Moisture-wicking performance fabric, athletic fit</li>
+            </ul>
+            <p><em>Official Anderson High School approved.</em></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FAQ SECTION -->
+  <!-- ============================================= -->
+  <section class="faq section fade-in" id="faq">
+    <div class="container">
+      <div class="faq__header">
+        <h2 class="faq__title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq__grid">
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>When will I receive my shirt?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Orders are produced after the pre-order window closes (around 2 weeks). We will share updates once orders are ready for pickup.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>Where do I pick up my order?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Orders will be available for on-campus pickup at Anderson High School. Specific dates, times, and locations will be announced once the shirts arrive.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>Can parents pick up for students?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>No, parents or guardians are not permitted to enter school grounds during pickup times. Your student must pick up orders on their behalf.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>How do I pay?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Online orders are processed securely via credit/debit card, Apple Pay, or Google Pay. There will be a $1 online processing fee for all online orders. For in-person sales, only cash or Venmo are accepted.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>Can I return or exchange my shirt?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>All sales are final — we do not accept returns, exchanges, or refunds. Please choose the size you think will fit best before placing your order.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>How do I contact you?</span>
+            <i class="fas fa-chevron-down faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>You can contact Trojan City Limits via email at <a href="mailto:trojancitylimits26@gmail.com" style="color: var(--trojan-gold); font-weight: 600;">trojancitylimits26@gmail.com</a> or by reaching out on our <a href="https://instagram.com/trojancitylimits" target="_blank" style="color: var(--trojan-gold); font-weight: 600;">Instagram @trojancitylimits</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CONTACT SECTION -->
+  <!-- ============================================= -->
+  <section class="contact section section--alt fade-in" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <h2 class="contact__title">Contact Us</h2>
+        <p class="contact__text">Have a question? Reach out and we'll get back to you.</p>
+        <div class="contact__buttons">
+          <a href="mailto:trojancitylimits26@gmail.com" class="btn btn--primary btn--large">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+          <a href="https://instagram.com/trojancitylimits" target="_blank" class="btn btn--secondary btn--large">
+            <i class="fab fa-instagram"></i> DM on Instagram
+          </a>
+        </div>
+        <p class="contact__email">trojancitylimits26@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- EMAIL SIGNUP SECTION -->
+  <!-- ============================================= -->
+  <section class="signup section section--navy">
+    <div class="container">
+      <div class="signup__inner">
+        <h2 class="signup__title">Stay In The Loop</h2>
+        <p class="signup__text">Get notified about pickup dates, future drops, and exclusive updates.</p>
+        <form class="signup__form" id="emailForm" onsubmit="handleEmailSubmit(event)">
+          <input
+            type="email"
+            class="signup__input"
+            placeholder="Enter your email"
+            required
+            id="emailInput"
+          >
+          <button type="submit" class="btn btn--primary signup__btn">Subscribe</button>
+        </form>
+        <p id="emailSuccess" style="display: none; margin-top: 1rem; color: var(--trojan-gold);">
+          <i class="fas fa-check-circle"></i> You're on the list!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="images/shirt-front.jpg" alt="Trojan City Limits" class="footer__logo">
+          <span class="footer__name">Trojan City Limits</span>
+        </div>
+        <div class="footer__links">
+          <a href="#shop" class="footer__link">Shop</a>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="#faq" class="footer__link">FAQ</a>
+          <a href="https://instagram.com/trojancitylimits" target="_blank" class="footer__link">Instagram</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://instagram.com/trojancitylimits" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Trojan City Limits. All rights reserved.</p>
+        <p class="footer__badge">Official Anderson High School Approved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
