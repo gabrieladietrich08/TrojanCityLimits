@@ -19,6 +19,7 @@ const productState = {
 // Sold-out variants (color-material-size keys)
 const soldOut = [
   'white-cotton-l',
+  'lightblue-drifit-s',
 ];
 
 // Product images for each color + material combination
