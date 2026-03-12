@@ -717,6 +717,18 @@ p {
   color: var(--white);
 }
 
+.option-btn--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.option-btn--sold-out {
+  position: relative;
+  text-decoration: line-through;
+  pointer-events: none;
+}
+
 .option-btn--color {
   display: flex;
   align-items: center;

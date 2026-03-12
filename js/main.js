@@ -16,6 +16,11 @@ const productState = {
   }
 };
 
+// Sold-out variants (color-material-size keys)
+const soldOut = [
+  'white-cotton-l',
+];
+
 // Product images for each color + material combination
 const productImages = {
   white: {
@@ -59,12 +64,6 @@ const checkoutLinks = {
   'white-cotton-m': 'https://square.link/u/nT8QW0px',
   'white-cotton-l': 'https://square.link/u/46Qxdz5j',
   'white-cotton-xl': 'https://square.link/u/JJIq6C9e',
-
-  // White Dri-Fit variants
-  'white-drifit-s': 'https://square.link/u/WFzboNTb',
-  'white-drifit-m': 'https://square.link/u/4WJH7Fkj',
-  'white-drifit-l': 'https://square.link/u/qAAHJAof',
-  'white-drifit-xl': 'https://square.link/u/LJ7NRRJC',
 
   // Light Blue Cotton variants
   'lightblue-cotton-s': 'https://square.link/u/pPYpsSW7',
@@ -174,11 +173,38 @@ function selectOption(type, value, buttonElement) {
     updateProductImages();
   }
   if (type === 'color') {
+    updateMaterialAvailability();
     updateProductImages();
   }
 
-  // Update checkout link
+  // Update size availability and checkout link
+  updateSizeAvailability();
   updateCheckoutLink();
+}
+
+// White does not come in Dri-Fit — disable that option when white is selected
+function updateMaterialAvailability() {
+  const drifitBtn = document.querySelector('#materialOptions [data-material="drifit"]');
+  if (!drifitBtn) return;
+
+  if (productState.color === 'white') {
+    drifitBtn.disabled = true;
+    drifitBtn.classList.add('option-btn--disabled');
+
+    // If dri-fit was selected, switch to cotton
+    if (productState.material === 'drifit') {
+      const cottonBtn = document.querySelector('#materialOptions [data-material="cotton"]');
+      if (cottonBtn) {
+        productState.material = 'cotton';
+        drifitBtn.classList.remove('option-btn--selected');
+        cottonBtn.classList.add('option-btn--selected');
+        updatePrice();
+      }
+    }
+  } else {
+    drifitBtn.disabled = false;
+    drifitBtn.classList.remove('option-btn--disabled');
+  }
 }
 
 function updatePrice() {
@@ -195,13 +221,47 @@ function updatePrice() {
   }
 }
 
+function updateSizeAvailability() {
+  const sizeButtons = document.querySelectorAll('#sizeOptions .option-btn');
+  sizeButtons.forEach(btn => {
+    const size = btn.dataset.size;
+    const key = `${productState.color}-${productState.material}-${size}`;
+    if (soldOut.includes(key)) {
+      btn.classList.add('option-btn--disabled', 'option-btn--sold-out');
+      btn.disabled = true;
+    } else {
+      btn.classList.remove('option-btn--disabled', 'option-btn--sold-out');
+      btn.disabled = false;
+    }
+  });
+
+  // If the currently selected size is sold out, deselect it
+  const currentKey = `${productState.color}-${productState.material}-${productState.size}`;
+  if (soldOut.includes(currentKey)) {
+    // Try to select the first available size
+    const available = Array.from(sizeButtons).find(btn => !btn.disabled);
+    if (available) {
+      sizeButtons.forEach(btn => btn.classList.remove('option-btn--selected'));
+      available.classList.add('option-btn--selected');
+      productState.size = available.dataset.size;
+    }
+  }
+}
+
 function updateCheckoutLink() {
   const buyButton = document.getElementById('buyButton');
   if (buyButton) {
     const key = `${productState.color}-${productState.material}-${productState.size}`;
     const link = checkoutLinks[key];
 
-    if (link && link !== 'YOUR_SQUARE_CHECKOUT_LINK_HERE') {
+    if (soldOut.includes(key)) {
+      buyButton.href = '#';
+      buyButton.target = '';
+      buyButton.onclick = (e) => {
+        e.preventDefault();
+        alert('Sorry, this variant is sold out!');
+      };
+    } else if (link && link !== 'YOUR_SQUARE_CHECKOUT_LINK_HERE') {
       buyButton.href = link;
       buyButton.target = '_blank';
       buyButton.rel = 'noopener noreferrer';
@@ -218,8 +278,10 @@ function updateCheckoutLink() {
   }
 }
 
-// Initialize checkout link on page load
+// Initialize product options on page load
 document.addEventListener('DOMContentLoaded', () => {
+  updateMaterialAvailability();
+  updateSizeAvailability();
   updateCheckoutLink();
 });
 
